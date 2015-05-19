@@ -9,10 +9,10 @@ config = YAML.load(File.read(config_file))
 worker = IrcLogger.new(config)
 
 daemon_opts = {
-  :dir_mode => :normal, 
-  :dir => File.join(Rails.root,'tmp/pid'), 
-  :log_dir => File.join(Rails.root,'log'), 
-  :log_output => true, 
+  :dir_mode => :normal,
+  :dir => File.join(Rails.root,'tmp/pid'),
+  :log_dir => File.join(Rails.root,'log'),
+  :log_output => true,
   :stop_proc => lambda { worker.finalize }
 }
 

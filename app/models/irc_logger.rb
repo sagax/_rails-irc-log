@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'eventmachine'
 require 'fileutils'
 require 'isaac/bot'
@@ -5,14 +6,14 @@ require 'isaac/bot'
 class IrcLogger
 
   attr_reader :config
-  
+
   def initialize config
     @config = {:server => 'irc.freenode.net', :port => 6667}.merge(config)
   end
-  
+
   def run
     context = self
-    
+
     bot = Isaac::Bot.new do
       configure do |c|
         c.nick    = context.config[:nick   ]
@@ -35,7 +36,7 @@ class IrcLogger
       on :part do
         Message.create :who => nick, :what => "left #{channel}", :when => Time.now, :channel => channel
       end
-      
+
       on :channel do
         unless message =~ /^!/
           Message.create :who => nick, :what => message, :when => Time.now, :channel => channel
@@ -50,5 +51,5 @@ class IrcLogger
       Message.create :who => config[:nick], :what => "/quit", :when => Time.now, :channel => channel
     end
   end
-  
+
 end

@@ -1,6 +1,6 @@
---- 
-:server: irc.freenode.net
-:port: 8000
-:nick: activelogger
-:channels: 
-- "#activelogger-test"
+---
+:server: irc.tomsk.net
+:port: 6666
+:nick: logger
+:channels:
+- "#rails"
