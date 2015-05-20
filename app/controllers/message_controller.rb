@@ -34,16 +34,9 @@ class MessageController < ApplicationController
       locs = dates.collect { |date|
         {
           :lastmod => Date.today.strftime('%Y-%m-%d'),
-#          :lastmod => date.strftime('%Y-%m-%d'),
           :loc => root.merge(day_path :channel => channel.sub(/^#/,''), :year => date.year, :month => date.month, :day => date.day).to_s
         }
       }
-#      locs += dates.group_by { |d| d.year }.collect { |y,d| d.max }.collect { |date|
-#        {
-#          :lastmod => date.strftime('%Y-%m-%d'),
-#          :loc => root.merge(year_path :channel => channel.sub(/^#/,''), :year => date.year).to_s
-#        }
-#      }
     }.flatten
 
     respond_to do |format|
