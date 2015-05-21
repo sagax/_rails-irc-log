@@ -5,3 +5,4 @@ log
 Gemfile.lock
 doc/app
 .sass-cache
+tmp
