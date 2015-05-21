@@ -1,6 +1,7 @@
 log
-tmp
+*.pid
 *.sqlite3
 .rvmrc
 Gemfile.lock
 doc/app
+.sass-cache

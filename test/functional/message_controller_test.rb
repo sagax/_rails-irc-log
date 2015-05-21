@@ -5,5 +5,4 @@ class MessageControllerTest < ActionController::TestCase
     get :view
     assert_response :success
   end
-
 end

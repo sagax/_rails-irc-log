@@ -1,6 +1,17 @@
----
 :server: irc.tomsk.net
 :port: 6666
-:nick: logger
+:nick: sagax_keeper
 :channels:
-- "#rails"
+    - "#rails"
+    - "#webdev"
+    - "#vim"
+    - "#defrag"
+    - "#help"
+    - "#ircrubot"
+    - "#javascript"
+    - "#opensuse"
+    - "#python"
+    - "#ruby"
+    - "#slax"
+    - "#tcl"
+    - "#vim"

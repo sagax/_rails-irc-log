@@ -1,8 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.3'
-gem 'sqlite3', :group => :development
-gem 'sqlite3', :group => :test
+gem 'rails', '3.2.17'
+gem 'sqlite3'
 gem 'therubyracer'
 gem 'json'
 gem 'nokogiri'
@@ -18,6 +17,3 @@ group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
 end
-
-# To use debugger
-# gem 'ruby-debug'
