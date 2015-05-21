@@ -30,16 +30,16 @@ class IrcLogger
       end
 
       on :join do
-        Message.create :who => nick, :what => "joined #{channel}", :when => Time.now, :channel => channel
+        Message.create :who => nick.force_encoding('utf-8'), :what => "joined #{channel}", :when => Time.now, :channel => channel
       end
 
       on :part do
-        Message.create :who => nick, :what => "left #{channel}", :when => Time.now, :channel => channel
+        Message.create :who => nick.force_encoding('utf-8'), :what => "left #{channel}", :when => Time.now, :channel => channel
       end
 
       on :channel do
-        unless message =~ /^!/
-          Message.create :who => nick, :what => message, :when => Time.now, :channel => channel
+        unless message.force_encoding('utf-8') =~ /^!/
+          Message.create :who => nick.force_encoding('utf-8'), :what => message.force_encoding('utf-8'), :when => Time.now, :channel => channel
         end
       end
     end
