@@ -6,3 +6,4 @@ Gemfile.lock
 doc/app
 .sass-cache
 tmp
+config/irc.yml
