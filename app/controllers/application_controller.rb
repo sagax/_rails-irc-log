@@ -22,4 +22,5 @@ class ApplicationController < ActionController::Base
     end
     Time.zone = cookies[:tz].nil? ? 'America/New_York' : cookies[:tz]
   end
+
 end

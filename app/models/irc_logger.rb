@@ -24,7 +24,7 @@ class IrcLogger
 
       on :connect do
         context.config[:channels].each do |channel|
-#          Message.create :who => context.config[:nick], :what => "/join", :when => Time.now, :channel => channel
+          #Message.create :who => context.config[:nick], :what => "/join", :when => Time.now, :channel => channel
           join channel
         end
       end
@@ -42,6 +42,7 @@ class IrcLogger
           Message.create :who => nick.force_encoding('utf-8'), :what => message.force_encoding('utf-8'), :when => Time.now, :channel => channel
         end
       end
+
     end
     EventMachine.run { bot.start }
   end
