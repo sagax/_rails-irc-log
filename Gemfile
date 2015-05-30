@@ -15,6 +15,7 @@ gem 'pry'
 gem 'pry-rails'
 gem 'rails-i18n'
 gem 'russian'
+gem 'unicorn'
 
 group :assets do
   gem 'sass'

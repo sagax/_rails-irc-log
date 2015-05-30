@@ -7,3 +7,6 @@ doc/app
 .sass-cache
 tmp
 config/irc.yml
+unicorn.rb
+public/assets
+run_unicorn
