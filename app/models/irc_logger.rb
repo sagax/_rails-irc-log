@@ -4,7 +4,6 @@ require 'fileutils'
 require 'isaac/bot'
 
 class IrcLogger
-
   attr_reader :config
 
   def initialize config

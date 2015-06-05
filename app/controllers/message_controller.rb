@@ -34,7 +34,7 @@ class MessageController < ApplicationController
       locs = dates.collect { |date|
         {
           :lastmod => Date.today.strftime('%Y-%m-%d'),
-          :loc => root.merge(day_path :channel => channel.sub(/^#/,''), :year => date.year, :month => date.month, :day => date.day).to_s
+          :loc => root.merge(day_path :channel => channel.sub(/^ #/, ''), :year => date.year, :month => date.month, :day => date.day).to_s
         }
       }
     }.flatten

@@ -9,7 +9,7 @@
     <tr class="quarter">
       <% quarter.each do |month| %>
         <td class="month">
-          <%= render :partial => 'message/calendar', :locals => { :channel => @channel, :year => @year, :month => month, :opts => year_display_opts } %>
+          <%= render :partial => 'message/calendar', :locals => {:channel => @channel, :year => @year, :month => month, :opts => year_display_opts } %>
         </td>
       <% end %>
     </tr>

@@ -6,7 +6,7 @@ module MessageHelper
   end
 
   def display_day_month date
-    I18n.localize(date, :format => '%b %d').gsub(/\b0/,'')
+    I18n.localize(date, :format => '%b %d').gsub(/\b0/, '')
   end
 
   def format_msg text
@@ -37,7 +37,7 @@ module MessageHelper
 
   def year_display_opts
     {
-#      :current_month => ['%B', lambda { |date| month_path(@channel, date.year, date.month) }]
+      #:current_month => ['%B', lambda { |date| month_path(@channel, date.year, date.month) }]
     }
   end
 
@@ -50,7 +50,7 @@ module MessageHelper
     Rails.logger.info(msg.inspect)
     unless msg.nil?
       date = msg.when
-      link_to("#{display_day_month(date)} &raquo;".html_safe, path_for_date(channel,date))
+      link_to("#{display_day_month(date)} &raquo;".html_safe, path_for_date(channel, date))
     end
   end
 
@@ -59,12 +59,12 @@ module MessageHelper
     Rails.logger.info(msg.inspect)
     unless msg.nil?
       date = msg.when
-      link_to("&laquo; #{display_day_month(date)}".html_safe, path_for_date(channel,date))
+      link_to("&laquo; #{display_day_month(date)}".html_safe, path_for_date(channel, date))
     end
   end
 
   def next_year_with_messages channel, year
-    msg = Message.after_date(channel, Time.zone.local(year,12,31))
+    msg = Message.after_date(channel, Time.zone.local(year, 12, 31))
     Rails.logger.info(msg.inspect)
     unless msg.nil?
       date = msg.when
@@ -73,7 +73,7 @@ module MessageHelper
   end
 
   def previous_year_with_messages channel, year
-    msg = Message.before_date(channel, Time.zone.local(year,1,1))
+    msg = Message.before_date(channel, Time.zone.local(year, 1, 1))
     Rails.logger.info(msg.inspect)
     unless msg.nil?
       date = msg.when
