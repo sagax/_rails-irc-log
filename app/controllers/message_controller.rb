@@ -60,9 +60,9 @@ class MessageController < ApplicationController
 
   def set_param_variables
     @channel = params[:channel]
-    @year = params[:year].to_i
-    @month = params[:month].to_i
-    @day = params[:day].to_i
+    @year    = params[:year].to_i
+    @month   = params[:month].to_i
+    @day     = params[:day].to_i
   end
 
   def get_referer_search_terms

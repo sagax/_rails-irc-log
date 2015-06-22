@@ -7,9 +7,6 @@ end
 
 module Irclog
   class Application < Rails::Application
-    # Activate observers that should always be running.
-    # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
-
     config.time_zone = 'Moscow'
     config.i18n.default_locale = :ru
     config.encoding = "utf-8"
